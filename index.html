@@ -50,9 +50,23 @@
 			<h2 id="change-city">New York🗽</h2>
 			<h5 id="currentDate">Tuesday 16:00</h5>
 
-			<img class="sun" src="src/sunny.jpeg" width="200px" />
-			<div class="T">
-				<h4 id="change-temp">75° F</h4>
+			<div class="row">
+				<div class="col-6">
+					<!-- <img class="sun" src="src/sunny.jpeg" width="200px" /> -->
+					<img
+						src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+						alt="sunny"
+						width="100px;"
+					/>
+					75 °F | °C
+				</div>
+				<div class="col-6">
+					<ul>
+						<li>Precipitation: 0%</li>
+						<li>Humidity: 73%</li>
+						<li>Wind: 2 km/h</li>
+					</ul>
+				</div>
 			</div>
 			<div class="row text-center">
 				<div class="col">
@@ -127,5 +141,8 @@
 			let apiUrl = "https://jsonplaceholder.typicode.com/users/1";
 			axios.get(apiUrl).then(displayUsername);
 		</script>
+		<small>
+			<a href="Open-source code, by Katya Rozhko
+		</small>
 	</body>
 </html>
