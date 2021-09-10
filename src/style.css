@@ -13,8 +13,10 @@ body {
 	font-family: Google Sans, Roboto, arial, sans-serif !important;
 }
 h1 {
-	color: black;
 	padding-top: 15px;
+	color: #202124;
+	font-size: 29px;
+	line-height: 26px;
 	padding-bottom: 1rem;
 	font-family: Google Sans, Roboto, arial, sans-serif !important;
 }
