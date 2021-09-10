@@ -1,21 +1,38 @@
 .row {
 	margin-top: 1rem;
 }
+.container {
+	font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+	padding: 40px;
+}
+
+body {
+	font-family: Google Sans, Roboto, arial, sans-serif !important;
+}
 h1 {
-	color: teal;
-	/* padding-left: 64px; */
+	color: black;
 	padding-top: 15px;
 	padding-bottom: 1rem;
-	font-family: "Spartan", sans-serif;
+	font-family: Google Sans, Roboto, arial, sans-serif !important;
 }
 h2 {
 	padding-top: 25px;
 	font-family: "Spartan", sans-serif;
 }
+
+#change-temp {
+	font-size: 48px;
+}
+
 h4,
 h5 {
-	font-family: "Spartan", sans-serif;
+	font-family: Google Sans, Roboto, arial, sans-serif !important;
+	font-size: 30px;
 }
+
 body {
 	padding-left: 5px;
 	font-family: "Spartan", sans-serif;
