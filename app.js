@@ -5,6 +5,10 @@ let apiKey = "b111d9ecb27df9d5eac99c7ddb03f247";
 function showTemperature(response) {
 	let temperature = Math.round(response.data.main.temp);
 	let temperatureElement = document.querySelector("#change-temp");
+	let humidityElement = document.querySelector("#humidity");
+	let windElement = document.querySelector("#wind");
+	humidityElement.innerHTML = response.data.main.humidity;
+	windElement.innerHTML = Math.round(response.data.wind.speed);
 	temperatureElement.innerHTML = `${temperature}°C`;
 }
 
