@@ -105,7 +105,8 @@ input {
 	margin-top: 1rem;
 }
 .btn {
-	background-color: indianred;
+	background-color: turquoise;
+	color: black;
 	border: none;
 }
 .footer {
@@ -146,4 +147,7 @@ input {
 h5 {
 	font-size: 22px;
 	color: #70757a;
+}
+hr {
+	color: lightgray;
 }

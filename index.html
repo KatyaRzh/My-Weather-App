@@ -27,21 +27,22 @@
 					<li>Kryvyi Rih</li>
 				</ul>
 			</div>
-			<form id="search-form">
+			<form id="search-form" >
 				<label type="Enter your city here"> </label>
-				<div class="search-box">
+				<div class="row">
+					<div class="col-9">
 					<input
 						id="search-text-input"
 						type="text"
 						placeholder="Enter a city ..."
-						autocomplete="off"
-						autofocus="on"
+						class="form-control"
 					/>
-
-					<button type="submit" class="btn btn-primary search-button">
-						Search
-					</button>
 				</div>
+					<div class="col-3">
+					<input type="submit" value="Search"  class="btn btn-primary w-100" />
+			
+				</div>
+			</div>
 			</form>
 	
 			<h2 id="change-city">New York</h2>
