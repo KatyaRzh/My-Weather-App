@@ -45,10 +45,10 @@ form.addEventListener("submit", search);
 let coinapiUrl = "https://genetical.me/api/coins";
 axios.get(`${coinapiUrl}`).then(showcoins);
 
-// function running, vartiables are assigned
+// function running, vartiables are assigned | not working yet
 function showcoins(response) {
 	let bicoinPrice = response.data[0].quote.USD.price;
 	let ethereumPrice = response.data[1].quote.USD.price;
 	let dogePrice = response.data[7].quote.USD.price;
-	console.log(bicoinPrice, ethereumPrice, dogePrice);
+	console.log(bicoinPrice);
 }
