@@ -40,3 +40,15 @@ function search(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+//API key from CoinMarketCap
+let coinapiUrl = "https://genetical.me/api/coins";
+axios.get(`${coinapiUrl}`).then(showcoins);
+
+// function running, vartiables are assigned
+function showcoins(response) {
+	let bicoinPrice = response.data[0].quote.USD.price;
+	let ethereumPrice = response.data[1].quote.USD.price;
+	let dogePrice = response.data[7].quote.USD.price;
+	console.log(bicoinPrice, ethereumPrice, dogePrice);
+}

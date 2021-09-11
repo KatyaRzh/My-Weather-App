@@ -29,9 +29,6 @@ h2 {
 	font-size: 24px;
 	display: inline;
 }
-.weather-details li {
-	display: block;
-}
 
 h4,
 h5 {
@@ -76,20 +73,33 @@ input {
 	width: 4rem;
 	height: 4rem;
 }
-li {
+
+.menu {
+	padding-left: 0;
+}
+
+.menu li {
 	list-style: none;
 	margin-right: 2rem;
 	color: #70757a;
-	display: inline-block;
+	display: inline;
+	font-size: 16px;
+	line-height: 16px;
+	/* padding-left: 9px; */
+	padding-top: 6px;
+}
+
+.weather-details li {
+	list-style: none;
+	margin-right: 2rem;
+	color: #70757a;
+	display: block;
 	font-size: 16px;
 	line-height: 16px;
 	padding-left: 9px;
 	padding-top: 6px;
 }
-ul {
-	padding-inline-start: unset;
-	margin-bottom: unset;
-}
+
 .sun {
 	width: 160px;
 	height: auto;
@@ -120,4 +130,16 @@ ul {
 .float-left {
 	display: inline;
 	font-size: x-large;
+}
+
+/* stock prices section */
+.crypto {
+	padding-left: 0;
+}
+
+.crypto li {
+	display: block;
+	list-style: none;
+	line-height: 2;
+	color: #70757a;
 }
