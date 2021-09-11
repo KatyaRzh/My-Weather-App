@@ -77,9 +77,14 @@ input {
 	height: 4rem;
 }
 li {
-	display: inline;
 	list-style: none;
 	margin-right: 2rem;
+	color: #70757a;
+	display: inline-block;
+	font-size: 16px;
+	line-height: 16px;
+	padding-left: 9px;
+	padding-top: 6px;
 }
 ul {
 	padding-inline-start: unset;
@@ -96,4 +101,23 @@ ul {
 }
 .footer {
 	text-align: center;
+}
+.overview {
+	margin-bottom: 20px;
+}
+
+.weather-temperature img {
+	margin-right: 10px;
+}
+
+.weather-temperature strong {
+	color: rgb(33, 33, 33);
+	font-size: 64px;
+	font-weight: 400;
+	display: inline;
+}
+
+.float-left {
+	display: inline;
+	font-size: x-large;
 }
