@@ -1,26 +1,34 @@
 //API key from OpenWeatherMap.org
 let apiKey = "b111d9ecb27df9d5eac99c7ddb03f247";
 
+// New Function to have the last Updated time.
+function formatDate(timestamp) {
+	let date = new Date(timestamp);
+	let hours = date.getHours();
+	if (hours < 10) {
+		hours = `0${hours}`;
+	}
+	let minutes = date.getMinutes();
+	if (minutes < 10) {
+		minutes = `0${minutes}`;
+	}
+	let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+	let day = days[date.getDay()];
+	return `${day} ${hours}:${minutes}`;
+}
+
 // Changing the temp on h4
 function showTemperature(response) {
 	let temperature = Math.round(response.data.main.temp);
 	let temperatureElement = document.querySelector("#change-temp");
 	let humidityElement = document.querySelector("#humidity");
+	let dateElement = document.querySelector("#date");
 	let windElement = document.querySelector("#wind");
 	humidityElement.innerHTML = response.data.main.humidity;
 	windElement.innerHTML = Math.round(response.data.wind.speed);
+	dateElement.innerHTML = formatDate(response.data.dt * 1000);
 	temperatureElement.innerHTML = `${temperature}°C`;
 }
-
-// # Current Day and Time
-let now = new Date();
-let h5 = document.querySelector("#currentDate");
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let day = days[now.getDay()];
-let hours = now.getHours();
-let minutes = now.getMinutes();
-
-h5.innerHTML = `${day} ${hours}:${minutes}`;
 
 // Calling weather API and changing innerHTMl
 function search(event) {
