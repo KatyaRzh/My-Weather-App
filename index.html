@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=, initial-scale=1.0" />
+		<meta name="viewport" content="width" , initial-scale="1.0" />
 		<title>🌍Weather App</title>
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -27,24 +27,27 @@
 					<li>Kryvyi Rih</li>
 				</ul>
 			</div>
-			<form id="search-form" >
+			<form id="search-form">
 				<label type="Enter your city here"> </label>
 				<div class="row">
 					<div class="col-9">
-					<input
-						id="search-text-input"
-						type="text"
-						placeholder="Enter a city ..."
-						class="form-control"
-					/>
-				</div>
+						<input
+							id="search-text-input"
+							type="text"
+							placeholder="Enter a city ..."
+							class="form-control"
+						/>
+					</div>
 					<div class="col-3">
-					<input type="submit" value="Search"  class="btn btn-primary w-100" />
-			
+						<input
+							type="submit"
+							value="Search"
+							class="btn btn-primary w-100"
+						/>
+					</div>
 				</div>
-			</div>
 			</form>
-	
+
 			<h2 id="change-city">New York</h2>
 			<h5>Last updated: <span id="date"></span></h5>
 
@@ -52,14 +55,21 @@
 				<div class="col-6">
 					<div class="clearfix weather-temperature">
 						<img
-							src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+							src="http://openweathermap.org/img/wn/01d@2x.png"
 							alt="sunny"
 							width="100px;"
 							id="icon"
 							class="float-left"
 						/>
-						<div class="float-left"> <strong id="change-temp">30</strong><span class="units">
-							 <a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span></div>
+						<div class="float-left">
+							<strong id="change-temp">30</strong
+							><span class="units">
+								<a href="#" id="celsius-link">°C</a> |
+								<a href="#" id="fahrenheit-link" class="active"
+									>°F</a
+								></span
+							>
+						</div>
 					</div>
 				</div>
 
@@ -70,7 +80,10 @@
 					</ul>
 				</div>
 			</div>
-			<div class="row text-center">
+
+<div class="weather-forecast" id="forecast"></div> 
+			
+			<!-- <div class="row text-center">
 				<div class="col">
 					<h4>Mon</h4>
 					<img
@@ -82,7 +95,7 @@
 				</div>
 				<div class="col">
 					<h4>Tue</h4>
-				<img
+					<img
 						src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
 						alt="sunny"
 						width="65px;"
@@ -91,7 +104,7 @@
 				</div>
 				<div class="col">
 					<h4>Wed</h4>
-				<img
+					<img
 						src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
 						alt="sunny"
 						width="65px;"
@@ -134,17 +147,17 @@
 					/>
 					<h4 class="weather">75° F</h4>
 				</div>
-			</div>
-			<hr>
-			<!-- Stock prices -->
-			<h1>Cryptocurrency📈</h1>
-		<ul class="crypto">
-			<li>BTC - $45,038.60 USD</li>
-				<li>ETH - $3,227.29 USD</li>
+				-->
+				<!-- </div> -->
+				<hr />
+				<!-- Stock prices -->
+				<h1>Cryptocurrency📈</h1>
+				<ul class="crypto">
+					<li>BTC - $45,038.60 USD</li>
+					<li>ETH - $3,227.29 USD</li>
 					<li>DOGE - $0.239828 USD</li>
-		</ul>
+				</ul>
 			</div>
-			
 		</div>
 		<script>
 			function displayUsername(response) {

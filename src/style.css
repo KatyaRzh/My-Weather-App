@@ -132,18 +132,6 @@ input {
 	font-size: x-large;
 }
 
-/* stock prices section */
-.crypto {
-	padding-left: 0;
-}
-
-.crypto li {
-	display: block;
-	list-style: none;
-	line-height: 2;
-	color: #70757a;
-}
-
 h5 {
 	font-size: 22px;
 	color: #70757a;
@@ -164,4 +152,19 @@ hr {
 
 a {
 	text-decoration: none;
+}
+.weather-forecast {
+	margin-top: 20px;
+	text-align: center;
+	color: #000;
+}
+.weather-forecast-date {
+	font-size: 26px;
+	opacity: 0.5;
+}
+.weather-forecast-temperatures {
+	font-size: 17px;
+}
+.weather-forecast-temperature-min {
+	opacity: 0.5;
 }
