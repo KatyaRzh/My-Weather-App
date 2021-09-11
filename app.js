@@ -19,33 +19,35 @@ const formatDate = function (timestamp) {
 };
 
 // API call for a 7 day forecast
-let getForecast = function (coordinates) {
-	console.log(coordinates);
-	let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+let getForecast = function (response) {
+	console.log("getForecast function: ", response);
+	let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${response.lat}&lon=${response.lon}&appid=${apiKey}&units=metric`;
 	console.log(apiUrl);
 	axios.get(apiUrl).then(displayForecast);
 };
 
-let displayForecast = function () {
+let displayForecast = function (response) {
+	console.log("displayForecast function: ", response);
+	let forecast = response.data.daily;
 	let forecastElement = document.querySelector("#forecast");
 
 	// concatenating 2 strings
 	let forecastHTML = `<div class="row">`;
 	let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-	days.forEach(function (day) {
+	forecast.forEach(function (forecastDay) {
 		forecastHTML =
 			forecastHTML +
 			`
-		<div class="col-2">
-			<div class="weather-forecast-date">${day}</div>
-		<img
-				src="http://openweathermap.org/img/wn/01d@2x.png"
+			<div class="col-2">
+				<div class="weather-forecast-date">${forecastDay.dt}</div>
+			<img
+				src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
 				alt="sunny"
 				width="55px;"
 					/> 
 					<div class="weather-forecast-temperatures">
-						<span class="weather-forecast-temperature-max">18</span> 
-						<span class="weather-forecast-temperature-min">12</span>
+						<span class="weather-forecast-temperature-max">${forecastDay.temp.max}</span> 
+						<span class="weather-forecast-temperature-min">${forecastDay.temp.min}</span>
 					</div>
 			</div>
 	`;
@@ -102,18 +104,6 @@ let search = function (event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-// //API key from CoinMarketCap
-// let coinapiUrl = "https://genetical.me/api/coins";
-// axios.get(`${coinapiUrl}`).then(showcoins);
-
-// // function running, vartiables are assigned | not working yet
-// function showcoins(response) {
-// 	let bicoinPrice = response.data[0].quote.USD.price;
-// 	let ethereumPrice = response.data[1].quote.USD.price;
-// 	let dogePrice = response.data[7].quote.USD.price;
-// 	console.log(bicoinPrice);
-// }
-
 // convert to F
 let displayFahrenheitTemperature = function (event) {
 	event.preventDefault();
@@ -140,5 +130,3 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-displayForecast();
