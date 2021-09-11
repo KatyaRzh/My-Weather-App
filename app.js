@@ -26,6 +26,8 @@ function showTemperature(response) {
 	let windElement = document.querySelector("#wind");
 	let iconElement = document.querySelector("#icon");
 
+	celsiusTemperature = response.data.main.temp;
+
 	humidityElement.innerHTML = response.data.main.humidity;
 	windElement.innerHTML = Math.round(response.data.wind.speed);
 	dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -70,3 +72,27 @@ function showcoins(response) {
 	let dogePrice = response.data[7].quote.USD.price;
 	console.log(bicoinPrice);
 }
+
+// convert to F
+function displayFahrenheitTemperature(event) {
+	event.preventDefault();
+	let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+	let temperatureElement = document.querySelector("#change-temp");
+	temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+// Convert back to C
+function displayCelsiusTemperature(event) {
+	event.preventDefault();
+	let temperatureElement = document.querySelector("#change-temp");
+	temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("New York");
