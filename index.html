@@ -5,7 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=, initial-scale=1.0" />
 		<title>Weather App</title>
-		<!-- CSS only -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -18,19 +17,16 @@
 	</head>
 	<body>
 		<div class="container">
-			<h1 id="searching-for-city">Weather Today</h1>
-			<!-- <div class="row">
-				<div class="col-1">Sydney</div>
-				<div class="col-1">New York</div>
-				<div class="col-1">Mexico City</div>
-				<div class="col-1">Kryvyi Rih</div>
-			</div> -->
-			<ul id="menu">
-				<li>San Francisco</li>
-				<li>Cupertino</li>
-				<li>Mexico City</li>
-				<li>Kryvyi Rih</li>
-			</ul>
+			<div class="overview">
+				<h1 id="searching-for-city">Weather Today</h1>
+
+				<ul id="menu">
+					<li>San Francisco</li>
+					<li>Cupertino</li>
+					<li>Mexico City</li>
+					<li>Kryvyi Rih</li>
+				</ul>
+			</div>
 			<form id="search-form">
 				<label type="Enter your city here"> </label>
 				<div class="search-box">
@@ -41,7 +37,7 @@
 						autocomplete="off"
 						autofocus="on"
 					/>
-					<!-- <input type="submit" value="Search" /> -->
+
 					<button type="submit" class="btn btn-primary search-button">
 						Search
 					</button>
@@ -52,14 +48,17 @@
 
 			<div class="row">
 				<div class="col-6">
-					<!-- <img class="sun" src="src/sunny.jpeg" width="200px" /> -->
-					<img
-						src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-						alt="sunny"
-						width="100px;"
-					/>
-					<p id="change-temp">75 °F | °C</p>
+					<div class="clearfix weather-temperature">
+						<img
+							src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+							alt="sunny"
+							width="100px;"
+							class="float-left"
+						/>
+						<div class="float-left">75 °F | °C</div>
+					</div>
 				</div>
+
 				<div class="col-6">
 					<ul class="weather-details">
 						<li>Precipitation: 0%</li>
@@ -108,9 +107,9 @@
 				<div class="col">
 					<h4>Fri</h4>
 					<img
-						class="sm-weather-img cloudy"
-						src="src/sunny.jpeg"
-						width="100px"
+						src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+						alt="sunny"
+						width="65px;"
 					/>
 					<h4 class="weather">81° F</h4>
 				</div>
@@ -126,9 +125,9 @@
 				<div class="col">
 					<h4>Sun</h4>
 					<img
-						class="sm-weather-img cloudy"
-						src="src/sunny.jpeg"
-						width="100px"
+						src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+						alt="sunny"
+						width="65px;"
 					/>
 					<h4 class="weather">75° F</h4>
 				</div>
